@@ -42,6 +42,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
       imports: [
       BrowserModule,
+      IonicModule,
       IonicModule.forRoot(MyApp),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireModule.initializeApp(config),

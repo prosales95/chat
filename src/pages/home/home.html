@@ -3,25 +3,38 @@
     <button ion-button menuToggle>
       <ion-icon name ="menu"> </ion-icon> </button>
       <ion-title>Home</ion-title>
+
+      <ion-buttons  end>
+        <button (click) = "takePicture()" class = "custom-icon">  
+          <ion-icon name="camera" color = "primary"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title *ngIf="base64Image.length == 0" center-right > <br/>  <br/> &nbsp; &nbsp; &nbsp; Click & take pics!</ion-title>
     </ion-navbar>
-</ion-header>
+  </ion-header>
 
-<ion-content padding>
-  <p>
-  Enter your username
-  </p>
+  <ion-content padding>
+    <p>
+      Enter your username
+    </p>
 
-  <ion-list>
+    <ion-list>
 
-  <ion-item>
-    <ion-label floating>Username</ion-label>
-    <ion-input type="text" [(ngModel)] ="username" ></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)] ="username" ></ion-input>
+      </ion-item>
 
-  
 
-</ion-list>
 
-<button ion-button block outline (click)="loginUser()" > Login </button>
+    </ion-list>
 
-</ion-content>
+    <button ion-button block outline (click)="loginUser()" > Login </button>
+
+    <ion-slides pager autoplay = "true" pager= "true" [options] ="extraOptions" *ngIf ="base64Image.lenght > 0 ">
+      <ion-slide *ngFor = "let image of base64Image">
+        <img [src]="image" />
+      </ion-slide>
+    </ion-slides>
+
+  </ion-content>

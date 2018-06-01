@@ -41,9 +41,12 @@ import { QuotesDetailPage } from '../quotes-detail/quotes-detail';
  	}
 
  	searchQuotes(event) {
-		if(event.target.value.length > 6) {
+		if(event.target.value.length > 2) {
       var filteredJson = this.quotesList.filter(function (row) {
-        if(row.author.indexOf(event.target.value) != -1) {
+
+        if(row.author.toLowerCase().indexOf(event.target.value.
+          toLowerCase()) != -1) {
+          
           return true
         } else {
           return false;

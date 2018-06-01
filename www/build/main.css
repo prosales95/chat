@@ -39899,3 +39899,8 @@ page-chat .message.special .innerMessage {
   text-align: center;
   position: relative;
 }
+
+page-home .custom-icon {
+  font-size: 32px;
+  color: blue;
+}
