@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { QuotesDetailPage } from '../quotes-detail/quotes-detail';
-
+import { GoogleAnalytics } from 'ionic-native';
 
 /**
  * Generated class for the QuotesListPage page.
@@ -25,7 +25,7 @@ import { QuotesDetailPage } from '../quotes-detail/quotes-detail';
  	isfiltered: boolean;
 
  	constructor(public navCtrl: NavController, public navParams:
- 		NavParams, public http : Http ) {
+ 		NavParams, public http : Http, public platform:Platform ) {
  		this.isfiltered = false;
  		this.http.get("quotes.json")
  		.map( res => res.json())
@@ -37,6 +37,10 @@ import { QuotesDetailPage } from '../quotes-detail/quotes-detail';
   			  	() => console.log('read quotes Complete '+ this.quotesList) 
   				//finished reading
   				);
+     platform.ready().then(() => {
+       GoogleAnalytics.trackView("Quotes List");
+     });
+
 
  	}
 
@@ -67,5 +71,7 @@ import { QuotesDetailPage } from '../quotes-detail/quotes-detail';
  	ionViewDidLoad() {
  		console.log('ionViewDidLoad QuotesListPage');
  	}
+
+
 
  }

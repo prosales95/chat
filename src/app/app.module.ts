@@ -9,7 +9,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ChatPage } from '../pages/chat/chat';
 import { AboutPage } from '../pages/about/about';
+import { ImportantPage } from '../pages/important/important';
 import { RegisterPage } from '../pages/register/register';
+import { AddtodoPage } from '../pages/addtodo/addtodo';
 import { QuotesListPage } from '../pages/quotes-list/quotes-list';
 import { QuotesDetailPage } from '../pages/quotes-detail/quotes-detail';
 import { AngularFireModule } from 'angularfire2';
@@ -17,8 +19,8 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
-
+import { Slides } from 'ionic-angular';
+import { DataserviceProvider } from '../providers/dataservice/dataservice';
   // Initialize Firebase
   var config = {
       apiKey: "AIzaSyBBrevlEQ70c4PapdyVRZ5tusJSHGNuZTA",
@@ -37,7 +39,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
       AboutPage,
       RegisterPage,
       QuotesDetailPage,
-      QuotesListPage
+      QuotesListPage,
+      ImportantPage,
+        AddtodoPage
       ],
 
       imports: [
@@ -49,8 +53,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     HttpClientModule,
-    HttpModule,
-   
+
+
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -60,13 +64,17 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     AboutPage,
     RegisterPage,
     QuotesListPage,
-    QuotesDetailPage
+    QuotesDetailPage,
+    ImportantPage,
+      AddtodoPage
     ],
     providers: [
     StatusBar,
+    Slides,
     SplashScreen,
     AngularFireDatabase,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataserviceProvider
     ]
 })
   export class AppModule {}

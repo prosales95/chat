@@ -31,10 +31,14 @@
 
     <button ion-button block outline (click)="loginUser()" > Login </button>
 
+    <button ion-button round icon-start (click) = "goToDo()" > <ion-icon name="star"></ion-icon> > Add MUST List</button>
+
     <ion-slides pager autoplay = "true" pager= "true" [options] ="extraOptions" *ngIf ="base64Image.lenght > 0 ">
       <ion-slide *ngFor = "let image of base64Image">
         <img [src]="image" />
       </ion-slide>
     </ion-slides>
+
+
 
   </ion-content>

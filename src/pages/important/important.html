@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      To Do
+    </ion-title>
+    <ion-buttons end>
+      <button (click)="showToDoPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <div *ngIf="noToDo">
+    <br/>Click on + to add to do items.
+  </div>
+  <ion-list inset>
+    <ion-item-sliding *ngFor="let toDo of toDos" >
+      <ion-item>
+        <h2>{{ toDo.name }} -  {{ toDo.createdTime | date:'yMMMMd' }}</h2>
+        <p class="item-description">{{toDo.description}}</p>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button (click)="delete(toDo)">
+          <ion-icon name="ion-trash-a"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

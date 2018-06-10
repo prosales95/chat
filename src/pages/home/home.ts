@@ -4,6 +4,8 @@ import { Camera, NativeStorage } from 'ionic-native';
 import  {ChatPage} from '../chat/chat'
 import { Slides } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
+import { ImportantPage } from '../../pages/important/important';
+
 
 @Component({
   selector: 'page-home',
@@ -12,7 +14,7 @@ import { ViewChild } from '@angular/core';
 
 export class HomePage {
   @ViewChild(Slides) slides:Slides;
-  
+
 
 
   username: string='';
@@ -38,7 +40,7 @@ export class HomePage {
       });
     });
   }
-  
+
 
   showAlert(title: string, message:string) {
     let alertBox = this.alertCtrl.create({
@@ -59,6 +61,10 @@ export class HomePage {
       } else {
         this.showAlert('Error', 'Invalid Username')
       }
+    }
+
+    goToDo(){
+      this.navCtrl.push(ImportantPage);
     }
 
     takePicture() {
