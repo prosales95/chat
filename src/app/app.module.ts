@@ -21,7 +21,13 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { Slides } from 'ionic-angular';
 import { DataserviceProvider } from '../providers/dataservice/dataservice';
-  // Initialize Firebase
+import { Pro } from '@ionic/pro';
+
+Pro.init('149DABB3', {
+  appVersion: '0.0.1'
+})
+
+// Initialize Firebase
   var config = {
       apiKey: "AIzaSyBBrevlEQ70c4PapdyVRZ5tusJSHGNuZTA",
       authDomain: "test-project-d2fcc.firebaseapp.com",
