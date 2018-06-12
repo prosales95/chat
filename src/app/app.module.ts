@@ -21,13 +21,38 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { Slides } from 'ionic-angular';
 import { DataserviceProvider } from '../providers/dataservice/dataservice';
+// These are all imports required for Pro Client with Monitoring & Deploy,
+// feel free to merge into existing imports above.
 import { Pro } from '@ionic/pro';
+import {  Injectable, Injector } from '@angular/core';
 
-Pro.init('149DABB3', {
+
+Pro.init('F309DE7C', {
   appVersion: '0.0.1'
 })
 
-// Initialize Firebase
+@Injectable()
+export class MyErrorHandler implements ErrorHandler {
+  ionicErrorHandler: IonicErrorHandler;
+
+  constructor(injector: Injector) {
+    try {
+      this.ionicErrorHandler = injector.get(IonicErrorHandler);
+    } catch(e) {
+      // Unable to get the IonicErrorHandler provider, ensure
+      // IonicErrorHandler has been added to the providers list below
+    }
+  }
+
+  handleError(err: any): void {
+    Pro.monitoring.handleNewError(err);
+    // Remove this if you want to disable Ionic's auto exception handling
+    // in development mode.
+    this.ionicErrorHandler && this.ionicErrorHandler.handleError(err);
+  }
+}
+
+  // Initialize Firebase
   var config = {
       apiKey: "AIzaSyBBrevlEQ70c4PapdyVRZ5tusJSHGNuZTA",
       authDomain: "test-project-d2fcc.firebaseapp.com",
