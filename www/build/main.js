@@ -528,23 +528,23 @@ webpackEmptyAsyncContext.id = 190;
 
 var map = {
 	"../pages/about/about.module": [
-		876,
+		877,
 		4
 	],
 	"../pages/addtodo/addtodo.module": [
-		877,
+		878,
 		3
 	],
 	"../pages/quotes-detail/quotes-detail.module": [
-		878,
+		879,
 		2
 	],
 	"../pages/quotes-list/quotes-list.module": [
-		879,
+		880,
 		1
 	],
 	"../pages/register/register.module": [
-		880,
+		881,
 		0
 	]
 };
@@ -661,7 +661,7 @@ var HomePage = /** @class */ (function () {
     ], HomePage.prototype, "slides", void 0);
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Anwender\Ionic\chat\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color = "secondary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name ="menu"> </ion-icon> </button>\n\n      <ion-title>Home</ion-title>\n\n\n\n      <ion-buttons  end>\n\n        <button (click) = "takePicture()" class = "custom-icon">  \n\n          <ion-icon name="camera" color = "primary"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n      <ion-title *ngIf="base64Image.length == 0" center-right > <br/>  <br/> &nbsp; &nbsp; &nbsp; Click & take pics!</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n  <ion-content padding>\n\n    <p>\n\n      Enter your username\n\n    </p>\n\n\n\n    <ion-list>\n\n\n\n      <ion-item>\n\n        <ion-label floating>Username</ion-label>\n\n        <ion-input type="text" [(ngModel)] ="username" ></ion-input>\n\n      </ion-item>\n\n\n\n\n\n\n\n    </ion-list>\n\n\n\n    <button ion-button block outline (click)="loginUser()" > Login </button>\n\n\n\n    <button ion-button round icon-start (click) = "goToDo()" > <ion-icon name="star"></ion-icon> > Add MUST List</button>\n\n\n\n    <ion-slides pager autoplay = "true" pager= "true" [options] ="extraOptions" *ngIf ="base64Image.lenght > 0 ">\n\n      <ion-slide *ngFor = "let image of base64Image">\n\n        <img [src]="image" />\n\n      </ion-slide>\n\n    </ion-slides>\n\n\n\n\n\n\n\n  </ion-content>\n\n'/*ion-inline-end:"C:\Users\Anwender\Ionic\chat\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Anwender\Ionic\chat\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar color = "secondary">\n    <button ion-button menuToggle>\n      <ion-icon name ="menu"> </ion-icon> </button>\n      <ion-title>Home</ion-title>\n\n      <ion-buttons  end>\n        <button (click) = "takePicture()" class = "custom-icon">\n          <ion-icon name="camera" color = "primary"></ion-icon>\n        </button>\n      </ion-buttons>\n      <ion-title *ngIf="base64Image.length == 0" center-right > <br/>  <br/> &nbsp; &nbsp; &nbsp; Click & take pics!</ion-title>\n    </ion-navbar>\n  </ion-header>\n\n  <ion-content padding>\n    <p>\n      Enter your username\n    </p>\n\n    <ion-list>\n\n      <ion-item>\n        <ion-label floating>Username</ion-label>\n        <ion-input type="text" [(ngModel)] ="username" ></ion-input>\n      </ion-item>\n\n\n\n    </ion-list>\n\n    <button ion-button block outline (click)="loginUser()" > Login </button>\n\n    <button ion-button round icon-start (click) = "goToDo()" > <ion-icon name="star"></ion-icon> > Add MUST List</button>\n\n    <ion-slides pager autoplay = "true" pager= "true" [options] ="extraOptions" *ngIf ="base64Image.lenght > 0 ">\n      <ion-slide *ngFor = "let image of base64Image">\n        <img [src]="image" />\n      </ion-slide>\n    </ion-slides>\n\n\n\n  </ion-content>\n'/*ion-inline-end:"C:\Users\Anwender\Ionic\chat\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]])
@@ -691,6 +691,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export MyErrorHandler */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
@@ -712,6 +713,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angularfire2_database__ = __webpack_require__(512);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_angularfire2_firestore__ = __webpack_require__(871);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_dataservice_dataservice__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_pro__ = __webpack_require__(876);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_pro___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20__ionic_pro__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -738,6 +741,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+// These are all imports required for Pro Client with Monitoring & Deploy,
+// feel free to merge into existing imports above.
+
+
+var MyErrorHandler = /** @class */ (function () {
+    function MyErrorHandler() {
+    }
+    MyErrorHandler.prototype.handleError = function (err) {
+        __WEBPACK_IMPORTED_MODULE_20__ionic_pro__["Pro"].monitoring.handleNewError(err);
+        // Remove this if you want to disable Ionic's auto exception handling
+        // in development mode.
+        this.ionicErrorHandler && this.ionicErrorHandler.handleError(err);
+    };
+    MyErrorHandler = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])()
+    ], MyErrorHandler);
+    return MyErrorHandler;
+}());
 
 // Initialize Firebase
 var config = {
@@ -851,29 +873,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MyApp = /** @class */ (function () {
     function MyApp(platform, statusBar, splashScreen) {
+        var _this = this;
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */];
-        this.initializeApp();
         //used for ex of ngFor and nav
-        this.pages = [
-            { title: 'Home', icon: 'home', component: __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */] },
-            { title: 'Chat', icon: 'star', component: __WEBPACK_IMPORTED_MODULE_8__pages_chat_chat__["a" /* ChatPage */] },
-            { title: 'Register', icon: 'heart', component: __WEBPACK_IMPORTED_MODULE_7__pages_register_register__["a" /* RegisterPage */] },
-            { title: 'About Us', icon: 'information-circle', component: __WEBPACK_IMPORTED_MODULE_6__pages_about_about__["a" /* AboutPage */] },
-            { title: 'Tasks & Duties', icon: 'ios-clock', component: __WEBPACK_IMPORTED_MODULE_9__pages_important_important__["a" /* ImportantPage */] },
-            { title: 'Quotes-Detail', icon: 'contact', component: __WEBPACK_IMPORTED_MODULE_11__pages_quotes_detail_quotes_detail__["a" /* QuotesDetailPage */] },
-            { title: 'Quotes-List', icon: 'list-box', component: __WEBPACK_IMPORTED_MODULE_10__pages_quotes_list_quotes_list__["a" /* QuotesListPage */] }
-        ];
-    }
-    MyApp.prototype.initializeApp = function () {
-        var _this = this;
-        //platf ready and plugins availab
-        //here for any high level native process
         this.platform.ready().then(function () {
+            _this.pages = [
+                { title: 'Home', icon: 'home', component: __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */] },
+                { title: 'Chat', icon: 'star', component: __WEBPACK_IMPORTED_MODULE_8__pages_chat_chat__["a" /* ChatPage */] },
+                { title: 'Register', icon: 'heart', component: __WEBPACK_IMPORTED_MODULE_7__pages_register_register__["a" /* RegisterPage */] },
+                { title: 'About Us', icon: 'information-circle', component: __WEBPACK_IMPORTED_MODULE_6__pages_about_about__["a" /* AboutPage */] },
+                { title: 'Tasks & Duties', icon: 'ios-clock', component: __WEBPACK_IMPORTED_MODULE_9__pages_important_important__["a" /* ImportantPage */] },
+                { title: 'Quotes-Detail', icon: 'contact', component: __WEBPACK_IMPORTED_MODULE_11__pages_quotes_detail_quotes_detail__["a" /* QuotesDetailPage */] },
+                { title: 'Quotes-List', icon: 'list-box', component: __WEBPACK_IMPORTED_MODULE_10__pages_quotes_list_quotes_list__["a" /* QuotesListPage */] }
+            ];
+            //platf ready and plugins availab
+            //here for any high level native process
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
+            _this.statusBar.styleDefault();
+            _this.splashScreen.hide();
             __WEBPACK_IMPORTED_MODULE_2_ionic_native__["b" /* GoogleAnalytics */].startTrackerWithId("UA-120265140-1");
             __WEBPACK_IMPORTED_MODULE_2_ionic_native__["b" /* GoogleAnalytics */].enableUncaughtExceptionReporting(true).then(function (_success) {
                 console.log("Successful enabling of uncaught exception reporting " +
@@ -881,10 +902,8 @@ var MyApp = /** @class */ (function () {
             }).catch(function (_error) {
                 console.log("error occured " + _error);
             });
-            _this.statusBar.styleDefault();
-            _this.splashScreen.hide();
         });
-    };
+    }
     MyApp.prototype.openPage = function (page) {
         //reset content nav to just this page
         // no need back button to show in screen
@@ -892,15 +911,15 @@ var MyApp = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]) === "function" && _a || Object)
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Anwender\Ionic\chat\src\app\app.html"*/'	<ion-menu [content] ="content">\n\n		<ion-header>\n\n			<ion-toolbar color = "primary">\n\n				<ion-title> Chatting Time </ion-title>\n\n			</ion-toolbar>\n\n		</ion-header>\n\n\n\n	<ion-content>\n\n		<ion-list>\n\n			<button color= "secondary" menuClose ion-item *ngFor = "let p of pages" (click)="openPage(p)" >\n\n				<ion-icon [name]="p.icon" item-left> </ion-icon>\n\n				 {{p.title}}\n\n			</button> \n\n		</ion-list>\n\n	</ion-content>\n\n\n\n</ion-menu>\n\n\n\n//Disable swipe to fo baCK cause poor UX combining STGB\n\n		<ion-nav [root]="rootPage" #content \n\n		swipeBackEnabled = "false"></ion-nav>'/*ion-inline-end:"C:\Users\Anwender\Ionic\chat\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=app.component.js.map
